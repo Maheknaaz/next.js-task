@@ -1,6 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+// next.config.mjs
+
+export default {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/products',
+        permanent: false,
+      },
+    ];
+  },
 };
 
-export default nextConfig;
+
